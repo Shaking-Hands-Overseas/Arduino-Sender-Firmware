@@ -2,7 +2,7 @@ void setup() {
   Serial.begin(9600); // // Serial Communication is starting with 9600 of baudrate speed
 }
 String reverse(int x){
-    return String(map(x, 0, 180, 180, 0));
+    return String(map(x, 0, 180, 180, 0)); // Reversing the values if needed
   };
 
 void loop() {
