@@ -6,15 +6,17 @@ String reverse(int x){
   };
 
 void loop() {
-  int y = int(analogRead(A0));
-  int x = map(y, 0, 1023, 0, 180);
-  String sensors_reading[] = {reverse(x), reverse(x), String(x), String(x), String(x)};
+  int y = int(analogRead(A0)); // Reading data from Analog port A0
+  int x = map(y, 0, 1023, 0, 180); // Converting voltage to degrees 
+  String sensors_reading[] = {reverse(x), reverse(x), String(x), String(x), String(x)}; // Creating a dictionary where we have stored each value, 
+                                                                                        // with reversed values included
 
   //Data Transmission to the python code via serial port
-  String Read = String(Serial.read());
-  if (Read = "A"){
+  String Read = String(Serial.read()); // reading the serial port
+  if (Read = "A"){                     // If we recieve an "A" through the serial port, we send the data
   String Info = "  " + sensors_reading[0] + "  " + sensors_reading[1] + "  " +  sensors_reading[2] + "  " + sensors_reading[3] + "  " + sensors_reading[4] + "  ";
-  Serial.println(Info); 
+  Serial.println(Info); //We Send the data
   }
-  delay(1000);
+  delay(1000); // 1s of delay, to avoid overflow
 } 
+
