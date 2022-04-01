@@ -18,7 +18,7 @@ void loop() {
   int s3 = int(analogRead(A[2])); // Reading data from Analog port A2
   int s4 = int(analogRead(A[3])); // Reading data from Analog port A3
   int s5 = int(analogRead(A[4])); // Reading data from Analog port A4
-  String sensors_reading[] = {reverse(s1), reverse(s2), normal(s3), normal(s4), normal(s5)}; // Creating a dictionary where we have stored each value, 
+  String sensors_reading[] = {reverse(s1), normal(s2), normal(s3), reverse(s4), normal(s5)}; // Creating a dictionary where we have stored each value, 
                                                                                         // with reversed values included
   //Data Transmission to the python code via serial port
   String Read = String(Serial.read()); // reading the serial port
