@@ -3,7 +3,7 @@ int maxes[] = {0, 0, 0, 0, 0};
 int mins[] = {180,180,180,180,180};
 
 void setup() {
-  Serial.begin(9600); // // Serial Communication is starting with 9600 of baudrate speed
+  Serial.begin(115200); // // Serial Communication is starting with 115200 of baudrate speed
 }
 String reverse(int x){
     return String(map(x, 0, 4095, 180, 0)); // Reversing the values if needed
