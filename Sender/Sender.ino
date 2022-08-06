@@ -1,3 +1,5 @@
+#include <Servo.h>
+Servo servo1, servo2, servo3,servo4, servo5;
 int A[] = {36, 39, 32, 34, 35};
 int maxes[] = {0, 0, 0, 0, 0};
 int mins[] = {180,180,180,180,180};
@@ -7,7 +9,7 @@ void setup() {
 }
 String reverse(int x){
     return String(map(x, 0, 4095, 180, 0)); // Reversing the values if needed
-  };
+    };
 
 String normal(int s){
   return String(map(s, 0, 4095, 0, 180)); // Converting voltage to degrees 
